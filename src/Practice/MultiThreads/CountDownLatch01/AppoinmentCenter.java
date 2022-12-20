@@ -1,0 +1,14 @@
+package Practice.MultiThreads.CountDownLatch01;
+
+import java.time.LocalDate;
+
+public class AppoinmentCenter {
+
+    private LocalDate day = LocalDate.now();
+    public synchronized LocalDate getAppoinmentDate () {
+
+        day = day.plusDays(1);
+
+        return day;
+    }
+}
